@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+body {
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%)) fixed;
+}
+
+.container {
+    position: relative;
+    max-width: 1440px;
+    height: 97vh;
+    margin: 0 auto;
+}
+
+.faq {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 920px;
+    height: 510px;
+    background: url('../img/bg-pattern-desktop.svg'), #fff;
+    background-repeat: no-repeat;
+    background-position: -530px 65%;
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 10px 25px 30px rgba(0,0,0,.3);
+    &__left-side {
+        position: relative;
+        height: 100%;
+        width: 53%;
+        overflow: hidden;
+    }
+    &__woman {
+        transform: translate(-85px,75px);
+    }
+    &__box {
+        position: absolute;
+        top: 41%;
+        left: -13%;
+    }
+    &__accordion-item {
+        width: 350px;
+        margin-top: 20px;
+    }
+    &__accordion {
+        margin-top: 70px;
+        span {
+            font-weight: 700;
+            font-size: 30px;
+        }
+    }
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 330px;
+        cursor: pointer;
+        &:hover {
+            .faq__title {
+                transition: .2s all;
+                color: hsl(14, 88%, 65%);
+            }
+        }
+    }
+    &__arrow {
+        margin-top: 3px;
+        transition: .2s all;
+        &_active {
+            transform: rotate(180deg);
+        }
+    }
+    &__title {
+        color: hsl(237, 12%, 33%);
+        &_active {
+            color: hsl(238, 29%, 16%);
+            font-weight: 700;
+        }
+    }
+    &__answer {
+        display: none;
+        max-width: 315px;
+        color: hsl(240, 6%, 50%);
+        margin-top: 20px;
+        opacity: 0;
+        transition: .3s all;
+        &_active {
+            display: block;
+            opacity: 1;
+        }
+    }
+    .faq__accordion-item:first-of-type {
+        margin-top: 30px;
+    }
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: hsl(240, 5%, 91%);
+    margin-top: 15px;
+}
+
