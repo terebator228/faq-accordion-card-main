@@ -1,0 +1,64 @@
+
+
+@media (max-width: 992px) {
+    .faq {
+        width: 700px;
+        &__question {
+            width: 270px;
+        }
+        &__answer {
+            width: 255px;
+        }
+        &__woman {
+            width: 400px;
+        }
+        .divider {
+            width: 270px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: 12px;
+    }
+    .faq {
+        background: url('../img/bg-pattern-mobile.svg'), #fff;
+        background-repeat: no-repeat;
+        background-position: 67px 0%;
+        width: 375px;
+        height: 536px;
+        &__left-side {
+            display: none;
+        }
+        &__box {
+            display: none;
+        }
+        &__woman {
+            &_mobile {
+                position: absolute;
+                display: block;
+                width: 240px;
+                transform: none;
+                top: -107px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__right-side {
+            width: 100%;
+        }
+        &__accordion {
+            margin-top: 140px;
+            span {
+                display: block;
+                text-align: center;
+            }
+            &-item {
+                width: 280px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

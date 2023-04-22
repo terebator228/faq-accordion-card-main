@@ -38,6 +38,9 @@ body {
     }
     &__woman {
         transform: translate(-85px,75px);
+        &_mobile {
+            display: none;
+        }
     }
     &__box {
         position: absolute;
@@ -84,14 +87,13 @@ body {
     }
     &__answer {
         display: none;
-        max-width: 315px;
+        width: 315px;
         color: hsl(240, 6%, 50%);
         margin-top: 20px;
-        opacity: 0;
         transition: .3s all;
         &_active {
             display: block;
-            opacity: 1;
+            height: auto;
         }
     }
     .faq__accordion-item:first-of-type {
@@ -106,3 +108,4 @@ body {
     margin-top: 15px;
 }
 
+@import 'media';
